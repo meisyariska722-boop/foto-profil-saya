@@ -1,0 +1,365 @@
+
+/* PENGATURAN DASAR */
+:root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --soft: #f4f2ff;
+    --text: #25213b;
+    --muted: #6c6880;
+    --primary: #7057d9;
+    --border: #e6e1f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* HEADER DAN NAVIGASI */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.navbar a {
+    font-size: 14px;
+}
+
+/* BAGIAN PROFIL */
+.hero {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 520px;
+    margin: auto;
+    padding: 65px 0;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.label {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text > p:not(.label) {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+/* TOMBOL */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    padding: 11px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.secondary {
+    background: var(--surface);
+    color: var(--text);
+}
+
+/* KOTAK FOTO PROFIL */
+.profile-illustration {
+    width: 100%;
+    padding: 35px 20px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #e9e4ff, #dff5ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* FOTO PROFIL BULAT */
+.foto-profil {
+    display: block;
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid white;
+    margin: 0 auto 20px;
+}
+
+.profile-illustration h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.profile-illustration p {
+    color: #625b7e;
+    font-size: 14px;
+}
+
+/* BAGIAN UMUM */
+.section {
+    padding: 75px 5%;
+}
+
+.about,
+.contact {
+    background: var(--soft);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.section-heading h2,
+.contact h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child,
+.card p,
+.contact p {
+    color: var(--muted);
+}
+
+/* KARTU */
+.card-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    min-width: 0;
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* MINAT DAN KETERAMPILAN */
+.interests {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.skill-list span {
+    padding: 10px 18px;
+    background: var(--soft);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* KONTAK */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* FOOTER */
+footer {
+    padding: 24px;
+    text-align: center;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* TEMA GELAP */
+body.dark-mode {
+    --bg: #171625;
+    --surface: #222035;
+    --soft: #1d1b2d;
+    --text: #f5f2ff;
+    --muted: #c0bbd3;
+    --primary: #a99aff;
+    --border: #39354e;
+}
+
+body.dark-mode .profile-illustration {
+    background: linear-gradient(135deg, #302b50, #203744);
+}
+
+body.dark-mode .profile-illustration p {
+    color: #e0dcf5;
+}
+
+/* LAYAR MINIMAL 768 PX: TIGA KOLOM */
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* LAYAR DI BAWAH 768 PX: SATU KOLOM */
+@media (max-width: 767px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 0;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .navbar {
+        width: 92%;
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+}
+
+/* HP KECIL */
+@media (max-width: 480px) {
+    .navbar {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero,
+    .section {
+        width: 100%;
+        padding: 40px 5%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .profile-illustration {
+        padding: 25px 15px;
+    }
+
+    .foto-profil {
+        width: 130px;
+        height: 130px;
+    }
+}
